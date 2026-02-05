@@ -9,8 +9,8 @@ export interface User {
 export interface FileContent {
   id: string;
   name: string;
-  type: string;
-  content: string; // Base64 for images/binary, text for documents
+  type: string; // 'text/plain', 'image/png', 'application/pdf', 'whiteboard'
+  content: string; // Text string, Base64 for images/PDFs/Whiteboard state
   lastModified: number;
   authorId: string;
 }
@@ -21,7 +21,6 @@ export interface ChatMessage {
   senderName: string;
   text: string;
   timestamp: number;
-  isAI?: boolean;
 }
 
 export interface Room {
@@ -31,7 +30,7 @@ export interface Room {
   ownerId: string;
   files: FileContent[];
   messages: ChatMessage[];
-  members: string[]; // User IDs
+  members: string[];
 }
 
 export enum AppState {
