@@ -1,8 +1,0 @@
-{
-  "name": "StuddySpace - Collaborative Private Rooms",
-  "description": "A high-end private study room application where users can collaborate on documents in real-time, share files, and get AI-powered study assistance using Gemini.",
-  "requestFramePermissions": [
-    "camera",
-    "microphone"
-  ]
-}
